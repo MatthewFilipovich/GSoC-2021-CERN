@@ -1,0 +1,30 @@
+histograms:
+    mc1.yoda:
+        ErrorBars: false
+        Title: mc1
+        yoda: |+
+            BEGIN YODA_COUNTER_V2 /ALICE_2010_S8625980/Nevt_after_cuts
+            Path: /ALICE_2010_S8625980/Nevt_after_cuts
+            ScaledBy: 9.90099009900990111e-03
+            Title: ~
+            Type: Counter
+            ---
+            # sumW	 sumW2	 numEntries
+            6.698822e+03	6.632497e+01	1.010000e+06
+            END YODA_COUNTER_V2
+
+    mc2.yoda:
+        ErrorBars: false
+        Title: mc2
+        yoda: |+
+            BEGIN YODA_COUNTER_V2 /ALICE_2010_S8625980/Nevt_after_cuts
+            Path: /ALICE_2010_S8625980/Nevt_after_cuts
+            ScaledBy: 9.90099009900990111e-03
+            Title: ~
+            Type: Counter
+            ---
+            # sumW	 sumW2	 numEntries
+            6.672604e+03	6.606539e+01	1.010000e+06
+            END YODA_COUNTER_V2
+
+style: default
