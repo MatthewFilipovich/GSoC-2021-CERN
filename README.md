@@ -12,6 +12,7 @@ Before my Google Summer of Code 2021 project, visualization of Rivet’s output 
 
 # Design and Implementation
 An overview of the implemented plotting API is shown below, where the user supplies the input files (`data1.yoda`, `data2.yoda`, ...) containing the histogram data (as YODA objects) to be plotted:
+
 <img src="framework.png">
 
 The plotting API is separated into four commands (which execute Python scripts):
@@ -22,7 +23,7 @@ The plotting API is separated into four commands (which execute Python scripts):
 
 ## rivet-mkhtml
 
-Histogram plots from the YODA files `data1.yoda` and `data2.yoda` are created using the following command: 
+Histogram plots from the YODA files `data1.yoda` and `data2.yoda` are created using the following command:
 ```bash
 rivet-mkhtml data1.yoda data2.yoda
 ```
@@ -39,8 +40,8 @@ The `rivet-mkdat` command creates intermediate data files (using YAML syntax) th
 
 ## rivet-plot
 The `rivet-plot` command produces a Rivet-style histogram plot from the data in the intermediate data file (created with `rivet-mkdat`). The initial plot is produced by calling the `yoda-plot` command, which returns the created figure object, and the Rivet-style is then applied to this figure. An example Rivet-style histogram plot is shown below:
-<img src="rivet_hist.png">
 
+<img src="rivet_hist.png">
 
 The following plot settings, specified in the data file, have been implemented in the plotting API:
 - Title
@@ -83,9 +84,11 @@ for hist in hists:
 # Plot objects using "yoda"
 yoda.plot_hist(hists)
 yoda.plot_ratio(hists)
-``` 
+```
 The above script creates the following two plots:
+
 <img src="yoda1D_hist.png">
+
 <img src="yoda1D_ratio.png">
 
 As well, these plotting methods support several arguments for modifying the created plots (e.g., show error bars, colors, line styles, show legend, etc.). 
